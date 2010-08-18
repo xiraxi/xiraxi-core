@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-XiraxiCore::Application.load_tasks
+XiraxiCoreMod::Application.load_tasks
