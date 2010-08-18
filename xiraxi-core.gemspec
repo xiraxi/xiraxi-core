@@ -14,5 +14,6 @@ Gem::Specification.new do |s|
   s.add_dependency "acts-as-taggable-on"
   s.add_dependency "paperclip"
   s.add_dependency "http_accept_language"
+  s.add_dependency "haml"
 
 end
