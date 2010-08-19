@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<% if flash[:notice] %> <div class="flash-box notice"><%= flash[:notice] %></div> <% end %>
+<% if flash[:error] %> <div class="flash-box error"><%= flash[:error] %></div> <% end %>
+
 <%= yield %>
 
 </body>

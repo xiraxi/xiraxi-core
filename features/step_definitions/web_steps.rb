@@ -11,7 +11,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 
 module WithinHelpers
   def with_scope(locator)
-    locator ? within(locator) { yield } : yield
+    locator ? within(:xpath, find_by_query(locator).path) { yield } : yield
   end
 end
 World(WithinHelpers)
@@ -32,7 +32,7 @@ end
 
 When /^(?:|I )click on "([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
   with_scope(selector) do
-    click_link_or_button(link)
+    find_by_query(link).click
   end
 end
 
