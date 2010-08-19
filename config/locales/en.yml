@@ -1,3 +1,7 @@
 en:
   status:
     forbidden: "Sorry, you don't have access to this object."
+
+  buttons:
+    ok: Accept
+    cancel: Cancel

@@ -26,3 +26,7 @@ end
 Then /^the "([^"]*)" box contains "([^"]*)"$/ do |locator, content|
   find_by_query(locator).text.should include(content)
 end
+
+Then /^the page contains the "([^"]*)" box$/ do |locator|
+  find_by_query(locator).should_not be_nil
+end
