@@ -1,0 +1,7 @@
+
+en:
+  forms:
+    errors:
+      header:
+        one: "One error prohibited this object from being saved"
+        other: "%{count} errors prohibited this object from being saved"

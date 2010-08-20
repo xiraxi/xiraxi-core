@@ -30,3 +30,7 @@ end
 Then /^the page contains the "([^"]*)" box$/ do |locator|
   find_by_query(locator).should_not be_nil
 end
+
+Then /^the page contains "([^"]*)"$/ do |content|
+  page.should have_content(content)
+end

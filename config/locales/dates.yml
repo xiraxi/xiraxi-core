@@ -1,0 +1,6 @@
+en:
+  accessible:
+    date_select:
+      day: Day
+      month: Mes
+      year: Year
