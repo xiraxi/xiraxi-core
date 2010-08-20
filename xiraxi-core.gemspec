@@ -15,5 +15,6 @@ Gem::Specification.new do |s|
   s.add_dependency "paperclip"
   s.add_dependency "http_accept_language"
   s.add_dependency "haml"
+  s.add_dependency "asset-pocket"
 
 end
