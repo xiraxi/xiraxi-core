@@ -11,7 +11,9 @@
 <%= flash_box :error %>
 <%= flash_box :notice %>
 
-<%= yield %>
+<div id="primary-bar" class="sidebar"><%= content_for :primary_bar %></div>
+<div id="main"><%= yield %></div>
+<div id="secondary-bar" class="sidebar"><%= content_for :secondary_bar %></div>
 
 </body>
 </html>
