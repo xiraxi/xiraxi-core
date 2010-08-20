@@ -3,5 +3,5 @@ en:
     forbidden: "Sorry, you don't have access to this object."
 
   buttons:
-    ok: Accept
+    ok: Submit
     cancel: Cancel
