@@ -2,7 +2,7 @@
 module CookiesHack
   def cookie_jar
     # TODO This is a temp hack
-    cj = ObjectSpace.each_object(Rack::Test::Session).to_a.first.instance_variable_get(:@rack_mock_session).cookie_jar
+    cj = Capybara.current_session.driver.current_session.instance_variable_get(:@rack_mock_session).cookie_jar
     unless cj.respond_to?(:each)
       class <<cj
         def each(&block)

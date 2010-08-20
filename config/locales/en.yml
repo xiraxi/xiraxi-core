@@ -1,6 +1,7 @@
 en:
   status:
     forbidden: "Sorry, you don't have access to this object."
+    not_found: "Sorry, the request object can not be found."
 
   buttons:
     ok: Submit

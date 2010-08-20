@@ -16,6 +16,12 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    when /the (.*) page with (.*)/
+      path_components, fields = $1, $2
+
+      path_components = path_components.split(/\s+/)
+      fields = fields.scan(/(\S+): "([^"]*)"/).inject({}) {|hash, pair| hash[pair[0]] = pair[1]; hash }
+      url_for(send("hash_for_#{path_components.join('_')}_path").merge(fields))
 
     else
       begin

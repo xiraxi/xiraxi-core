@@ -14,4 +14,10 @@ When /^(?:|I )select "([^\"]*)" as the "([^\"]*)" date$/ do |date_to_select, fie
   end
 end
 
-
+Then /^these fields have errors: (.*)$/ do |fields|
+  fields.split(/\s*,\s*/).each do |field|
+    within(:css, "div.field_with_errors") do
+      find_by_query(field).should_not be_nil
+    end
+  end
+end

@@ -21,7 +21,7 @@ module XiraxiDomExtensions
             (cx.from_css("." + query.gsub(" ", "_")) rescue nil),
 
             # Using the special data-locator attribute
-            "*[@data-locator=#{cx.escape query}]"
+            "//*[@data-locator=#{cx.escape query}]"
 
         ].compact.each do |xpath_query|
             results = all(:xpath, xpath_query)
