@@ -6,6 +6,10 @@ module XiraxiCore::PageHelpers
     end
   end
 
+  def field_label(model, field)
+    model.human_attribute_name(field)
+  end
+
 end
 
 require 'action_view/base'
