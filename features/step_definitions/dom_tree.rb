@@ -10,6 +10,8 @@ Then /^I see the "?([^"]*)"? (box|page)$/ do |selector, kind|
     case selector
     when "forbidden"
       page.status_code.should eql(403)
+    when "not found"
+      page.status_code.should eql(404)
     else
       current_path.should == path_to("the #{selector} page")
     end
