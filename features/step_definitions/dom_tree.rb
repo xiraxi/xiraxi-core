@@ -19,6 +19,12 @@ Then /^I see the "?([^"]*)"? (box|page)$/ do |selector, kind|
   end
 end
 
+Then /^there is a "([^"]*)" box within the "([^"]*)" box$/ do |locator, scope|
+  with_scope(scope) do
+    find_by_query(locator).should_not be_nil
+  end
+end
+
 Then /^the "([^"]*)" box does not contain "([^"]*)"$/ do |locator, content|
   find_by_query(locator).text.should_not include(content)
 end
@@ -37,6 +43,10 @@ end
 
 Then /^the page contains "([^"]*)"$/ do |content|
   page.should have_content(content)
+end
+
+Then /^the page does not contain "([^"]*)"$/ do |content|
+  page.should_not have_content(content)
 end
 
 Then /^the "([^"]*)" box has these boxes in the same order:$/ do |box, table|
@@ -59,11 +69,23 @@ Then /^the "([^"]*)" box has these boxes in the same order:$/ do |box, table|
         " #{node["class"].to_s.downcase} ".include?(" #{field} ") || # CSS class
         node["data-locator"].to_s.downcase == field
 
-      node.inner_text.to_s.should include(content)
+      if content =~ /^\s*tag:\s*(\w+)\s*$/
+        node.search($1).should_not eql([])
+      else
+        node.inner_text.to_s.should include(content)
+      end
       row_waiting = true
 
     end
   end
 
   rows.should eql([])
+end
+
+Then /^there is a link with "([^"]+)" text within "([^"]+)"/ do |text, scope|
+  page.should have_xpath(find_by_query(scope).path + "/self::a[contains(normalize-space(.),#{Capybara::XPath.escape text})]")
+end
+
+Then /^the link "([^"]+)" has the attribute "([^"]+)" set to "([^"]+)"$/ do |text, attr, value|
+  page.should have_xpath("//a[contains(normalize-space(.),#{Capybara::XPath.escape text}) and @#{attr}=#{Capybara::XPath.escape value}]")
 end

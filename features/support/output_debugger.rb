@@ -16,7 +16,7 @@ After do
         path.open("w") {|f| f.write page.body }
         break
       end
-      STDERR.puts "Output written to #{path}"
     end
+    STDERR.puts "Output written to #{path}"
   end
 end
