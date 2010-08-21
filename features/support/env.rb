@@ -59,3 +59,8 @@ if defined?(ActiveRecord::Base)
 end
 
 Capybara.javascript_driver = :envjs
+
+
+# Xiraxi extensions
+require 'xiraxi_core/test_helpers'
+XiraxiCore::TestHelpers.load_definitions
