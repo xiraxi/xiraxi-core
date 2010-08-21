@@ -3,8 +3,8 @@ module XiraxiCore::FormHelpers
     "<div class='buttons_bar'>#{with_output_buffer(&block)}</div>".html_safe
   end
 
-  def button_ok
-    content_tag("button", t("buttons.ok"), :class => "ok-button", :type => "submit")
+  def button_ok(options = {})
+    content_tag("button", options[:label] || t("buttons.ok"), :class => "ok-button", :type => "submit")
   end
 
   def button_cancel(url = { :action => :index })
