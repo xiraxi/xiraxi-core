@@ -6,14 +6,14 @@ class XiraxiCore::Security
 
   attr_reader :aes_iv, :aes_key, :hmac_key
 
-  mattr_accessor :keys_files
-  self.keys_files = Rails.root.join("tmp/keys")
+  mattr_accessor :keys_file
+  self.keys_file = Rails.root.join("tmp/keys")
 
   class <<self
     def load
       instance = new
-      if File.exist?(keys_files)
-        instance.load_keys! keys_files
+      if keys_file.exist?
+        instance.load_keys! keys_file
       else
         instance.random_keys!
       end
@@ -45,15 +45,16 @@ class XiraxiCore::Security
   end
 
   def load_keys!(pathname)
-    source = YAML.load(File.read(pathname))
+    source = YAML.load(pathname.read)
     @aes_key = source["aes_key"]
     @aes_iv = source["aes_iv"]
     @hmac_key = source["hmac_key"]
     true
   end
 
-  def save_keys(pathname = self.class.keys_files)
-    File.open(pathname, "w") do |f|
+  def save_keys(pathname = self.class.keys_file)
+    pathname.dirname.mkpath
+    pathname.open("w") do |f|
       f.write({
         "aes_key" => @aes_key,
         "aes_iv" => @aes_iv,
