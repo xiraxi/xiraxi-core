@@ -28,6 +28,11 @@ class XiraxiCore::MenuItem
     end
   end
 
+  # Check if the user can see this menu item
+  def visible?(controller)
+    true
+  end
+
   # Return the text to be shown in the web. You should use t() to
   # internationalize the output
   def label
