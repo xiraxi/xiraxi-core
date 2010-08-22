@@ -56,7 +56,7 @@ Then /^the "([^"]*)" box has these boxes in the same order:$/ do |box, table|
   row_waiting = true
   field = content = nil
 
-  find_by_query(box).node.search("*").each do |node|
+  ordered_traverse(find_by_query(box).node) do |node|
     next unless node.element?
 
     if row_waiting
