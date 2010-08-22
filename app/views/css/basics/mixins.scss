@@ -1,0 +1,190 @@
+@mixin item {
+  overflow: auto;
+  border-bottom: 1px solid $boxborder-color;
+  padding-bottom: 18px;
+  margin-bottom: 15px;
+  margin-left: $box-margin;
+
+  a {
+    text-decoration: underline; 
+  }
+  .user-photo {
+    display: inline-block;
+    border: 1px solid #66a3c2;
+    float: left;
+    margin-right: $avatar-margin;
+
+    img {
+      border: 1px solid #cce0eb;
+      display: block;
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  h2 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    font-size: 125%;
+    text-transform: none;
+    border-bottom: none;
+
+    a {
+      color: $mainmenu-color;
+      text-decoration: none;
+    }
+  }
+  .metadata {
+    color: $text-medium;
+    margin-bottom: 0.5em;
+  }
+  .extract {
+    clear: left;
+  }
+  .text {
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  a.button {
+    @include button;
+  }
+  div.buttons {
+    display: inline-block;
+  }
+}
+
+@mixin comment-border {
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: dotted;
+  border-color: $boxborder-color;
+}
+
+@mixin button {
+  button, a.button {
+    background: $boxbg-color;
+    border: 1px solid $boxborder-color;
+    color: black;
+    display: inline-block;
+    padding: 0.4em;
+    margin: 0.3em;
+  }
+  button:hover, a.button:hover {
+    border: 1px solid $text-dark;
+  }
+  .ok-button {
+    font-weight: bold;
+  }
+  a.cancel-button, a.cancel-button:hover {
+    border: none;
+    background: none;
+    color: $link-color;
+  }
+  a.cancel-button:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin fieldset-hidden {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  legend {
+    position: absolute;
+    left: -6000px;
+  }
+}
+
+
+@mixin login-buttons {
+    width: 100%;
+    display: block;
+    border: none;
+    font-weight: bold;
+    color: $text-light;
+}
+
+@mixin navbarlink {
+    color: $text-light;
+    padding: 7px; 
+    display: block;
+    min-height: 18px;
+}
+
+@mixin sidebar-menu {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    border-bottom: 1px solid $boxborder-color;
+
+    a {
+      display: block; 
+      padding: 9px;
+      padding-left: 12px;
+      background: url(../images/f_submenu_li_a.png) no-repeat 3px 1.2em;
+      color: black;
+    }
+    a:hover {
+      color: $link-color;
+      background-image: url(../images/f_submenu_li_a_hover.png);
+    }
+  }
+  li.active {
+    a {
+        background-color: $activemenu-color;
+        font-weight: bold;
+    }
+  }
+}
+
+@mixin logos {
+  overflow: auto;
+  text-align: center;
+
+  img {
+    margin: auto;
+    border: none;
+  }
+}
+
+@mixin links-box {
+  ul {
+    margin: 0;
+    padding: 0;
+    padding-bottom: $box-margin;
+
+    li {
+      display: block;
+        
+      a {
+        display: block;
+        color: $text-verydark;
+        background: url(../images/f_submenu_li_a.png) no-repeat 3px 1.1em;
+        padding-left: 12px;
+        border-bottom: 1px solid $boxborder-color;
+        line-height: 2.3em;
+      }
+    }
+  }
+}
+
+@mixin photos-box {
+  .content {
+    padding-top: 11px;
+
+    a {
+      display: inline-block;
+      margin-left: 11px;
+      margin-bottom: 11px;
+
+      img {
+        border: none;
+      }
+    }
+  }
+}
