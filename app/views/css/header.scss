@@ -1,0 +1,136 @@
+
+
+#logo {
+  display: inline-block;
+  float: left;
+  margin-right: 12px;
+
+  img {
+    border: none;
+  }
+}
+
+#language_menu {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0.2em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      border-right: 1px solid $text-medium;
+
+      a {
+        color: $text-dark;
+        font-weight: bold;
+        padding: 0 6px 0 2px;
+      }
+    }
+    li:first-child {
+      border-left: 1px solid $text-medium;
+    }
+    li.active {
+      a {
+        color: $text-medium;
+        font-weight: normal;
+        padding-left: 6px;
+      }
+    }
+  }
+}
+
+#login_options {
+  float: right;
+  margin-bottom: 0.2em;
+}
+
+#navbar {
+  background: $mainmenu-color url(../images/corner_navbar.png) no-repeat top right;
+  padding-right: 4px;
+  display: table-cell;
+  vertical-align: top;
+  min-width: 797px;
+}
+
+#mainmenu {
+  display: inline-block;
+  background: url(../images/corner_navbar.png) no-repeat;
+  padding-left: 4px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      background: $mainmenu-color;
+      border-right: 1px solid $activemenu-color;
+
+      a {
+        @include navbarlink;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    li.active {
+      a {
+        background: $activemenu-color;
+        color: black;
+      }
+    }
+  }
+}
+
+#search {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+  padding: 0;
+
+  form {
+
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      input {
+        background: $boxbg-color;
+        border: 1px solid $boxbg-color;
+        padding: 1px;
+      }
+
+      input.button {
+        font-weight: bold;
+        padding: 1px;
+        border: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#web_statistics {
+  display: inline-block;
+  float: right;
+  margin-top: 4px;
+
+  ul {
+    display: inline;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      color: $text-medium;
+      border-right: 1px solid $text-medium;
+      padding: 0 6px;
+    }
+    li:first-child {
+      border-left: 1px solid $text-medium;
+    }
+  }
+}
+

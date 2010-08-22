@@ -1,0 +1,43 @@
+#container {
+  width: 962px;
+  margin: auto;
+}
+
+#header {
+  overflow: auto;
+  border-bottom: 1px solid $boxborder-color;
+  padding-bottom: 6px;
+}
+
+#primary_bar {
+  display: table-cell;
+  width: 163px;
+  vertical-align: top;
+  background: $boxbg-color;
+  color: $text-default;
+  border: solid $boxborder-color;
+  border-width: 0 1px;
+}
+
+#main {
+  display: table-cell;
+  width: 541px;
+  padding: 9px;
+  padding-bottom: 0;
+}
+
+#secondary_bar {
+  display: table-cell;
+  width: 240px;
+  padding-top: 9px;
+  vertical-align: top;
+}
+
+#footer {
+  clear: both;
+  width: 100%;
+  margin-top: 24px;
+  border-top: 1px solid $boxbg-color;
+  color: $text-dark;
+}
+

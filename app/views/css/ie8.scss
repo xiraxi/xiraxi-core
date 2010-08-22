@@ -1,0 +1,22 @@
+#main {
+  form {
+    fieldset {
+      padding-left: 0.5em;
+      padding-top: 0.5em;
+
+      ul {
+        border-collapse: collapse;
+
+        li {
+          border-bottom: 4px solid white;
+          border-collapse: collapse;
+
+          input {
+            padding: 2px;
+            border-collapse: separate;
+          }
+        }
+      }
+    }
+  }
+}

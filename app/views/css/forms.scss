@@ -1,0 +1,108 @@
+form {
+  fieldset {
+    border: 1px solid $boxborder-color;
+    margin: 2em 0;
+
+    fieldset {
+      border: none;
+
+      legend {
+        color: black;
+        font-size: 100%;
+        font-weight: normal;
+        border: none;
+      }
+    }
+
+    legend {
+      color: $mainmenu-color;
+      font-weight: bold;
+      font-size: 130%;
+      margin-bottom: 0.5em;
+      border: 1px solid $boxborder-color;
+      border-bottom: none;
+      padding: 0 0.5em;
+      margin-top: -0.7em;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      display: table;
+
+      li {
+        display: block;
+        display: table-row-group;
+
+        label {
+          padding-right: 1em;
+          padding-bottom: 0.8em;
+          vertical-align: top;
+        }
+        label:first-child {
+          display: table-cell;
+        }
+        label.wide {
+          display: block;
+          float: none;
+        }
+        input {
+          display: table-cell;
+          border: 1px solid $boxborder-color;
+          background: transparent;
+          float: left;
+        }
+        input[type=radio] {
+          border: none;
+        }
+        textarea {
+          width: 99%;
+          border: 1px solid $boxborder-color;
+          background: transparent;
+          margin-bottom: 0.5em;
+        }
+        textarea.medium {
+          height: 6em;
+        }
+      }
+      ul {
+        width: 200%;
+        padding-bottom: 1em;
+
+        li {
+          display: block;
+          clear: left;
+
+          label {
+            display: inline-block;
+          }
+          input {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .user_photo, .resource_photo {
+    display: inline-block;
+    float: left;
+    margin-right: 0.5em;
+
+    a {
+      img {
+        border: none;
+      }
+    }
+  }
+  p.photo_help {
+    margin: 0;
+  }
+  input.delete_photo {
+    display: inline-block;
+  }
+  input.upload_photo {
+    clear: left;
+    margin-bottom: 0.3em;
+  }
+}
+
+
