@@ -126,12 +126,12 @@
       display: block; 
       padding: 9px;
       padding-left: 12px;
-      background: url(../images/f_submenu_li_a.png) no-repeat 3px 1.2em;
+      background: url(../images/icons/f_submenu_li_a.png) no-repeat 3px 1.2em;
       color: black;
     }
     a:hover {
       color: $link-color;
-      background-image: url(../images/f_submenu_li_a_hover.png);
+      background-image: url(../images/icons/f_submenu_li_a_hover.png);
     }
   }
   li.active {
@@ -164,7 +164,7 @@
       a {
         display: block;
         color: $text-verydark;
-        background: url(../images/f_submenu_li_a.png) no-repeat 3px 1.1em;
+        background: url(../images/icons/f_submenu_li_a.png) no-repeat 3px 1.1em;
         padding-left: 12px;
         border-bottom: 1px solid $boxborder-color;
         line-height: 2.3em;

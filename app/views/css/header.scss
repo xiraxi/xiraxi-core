@@ -48,7 +48,7 @@
 }
 
 #navbar {
-  background: $mainmenu-color url(../images/corner_navbar.png) no-repeat top right;
+  background: $mainmenu-color url(../images/icons/corner_navbar.png) no-repeat top right;
   padding-right: 4px;
   display: table-cell;
   vertical-align: top;
@@ -57,7 +57,7 @@
 
 #mainmenu {
   display: inline-block;
-  background: url(../images/corner_navbar.png) no-repeat;
+  background: url(../images/icons/corner_navbar.png) no-repeat;
   padding-left: 4px;
 
   ul {

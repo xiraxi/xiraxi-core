@@ -43,7 +43,7 @@ h3 {
   background: $boxbg-color;
 
   a {
-    background: url(../images/f_section_read_more.png) no-repeat right;
+    background: url(../images/icons/f_section_read_more.png) no-repeat right;
     display: block;
     font-size: 95%;
     text-transform: uppercase;
@@ -58,7 +58,7 @@ div.report_spam {
   margin-right: 10px;
 
   a {
-    background: url(../images/exclamation.png) no-repeat right;
+    background: url(../images/icons/exclamation.png) no-repeat right;
     padding-right: 20px;
     text-decoration: none;
     display: block;
@@ -96,13 +96,13 @@ div.report_spam {
        li {
          a {
            border: none;
-           background: url(../images/page_next.png) no-repeat right;
+           background: url(../images/icons/page_next.png) no-repeat right;
            padding-right: 20px;
          }
        }
        li:first-child {
          a {
-           background: url(../images/page_previous.png) no-repeat left;
+           background: url(../images/icons/page_previous.png) no-repeat left;
            padding-left: 20px;
            margin-right: 0.5em;
          }
@@ -151,7 +151,7 @@ div.anonymous {
   margin-bottom: 1.1em;
 
   h2 {
-    background: $mainmenu-color url(../images/box_top_corner.png) no-repeat;
+    background: $mainmenu-color url(../images/icons/box_top_corner.png) no-repeat;
     color: $text-light;
     border-bottom: 4px solid $accent-color;
     margin: 0;
@@ -170,7 +170,7 @@ div.anonymous {
   @include links_box;
 
   h2 {
-    background: $text-dark url(../images/box_top_corner_dark.png) no-repeat;
+    background: $text-dark url(../images/icons/box_top_corner_dark.png) no-repeat;
     color: $text-light;
     border-color: #333333;
   }
@@ -183,7 +183,7 @@ div.anonymous {
 
         a {
           border-bottom: 1px solid $text-light;
-          background-image: url(../images/f_submenu_li_a_dark.png);
+          background-image: url(../images/icons/f_submenu_li_a_dark.png);
         }
       }
     }
