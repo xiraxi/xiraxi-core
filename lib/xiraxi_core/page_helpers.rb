@@ -10,6 +10,14 @@ module XiraxiCore::PageHelpers
     model.human_attribute_name(field)
   end
 
+  def link_button_edit(url)
+    link_to(t("actions.edit"), url, :class => "button")
+  end
+
+  def link_button_delete(url)
+    link_to(t("actions.delete"), url, :class => "button", :method => :delete, :confirm => t("confirm.delete"))
+  end
+
 end
 
 require 'action_view/base'

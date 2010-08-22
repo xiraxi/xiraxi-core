@@ -6,3 +6,10 @@ en:
   buttons:
     ok: Submit
     cancel: Cancel
+
+  actions:
+    edit: Edit
+    delete: Delete
+
+  confirm:
+    delete: "Are you sure?"
