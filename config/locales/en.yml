@@ -13,3 +13,6 @@ en:
 
   confirm:
     delete: "Are you sure?"
+
+  tag_cloud:
+    title: Tag cloud
