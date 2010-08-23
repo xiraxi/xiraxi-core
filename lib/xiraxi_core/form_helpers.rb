@@ -28,3 +28,14 @@ require 'action_view/base'
 class ActionView::Base
   include XiraxiCore::FormHelpers
 end
+
+module XiraxiCore::FormBuilderHelpers
+  def hidden_label(*args, &block)
+    @template.content_tag :div, label(*args, &block), :style => "position: absolute; left: -1000px"
+  end
+end
+
+class  ActionView::Helpers::FormBuilder
+  include XiraxiCore::FormBuilderHelpers
+end
+
