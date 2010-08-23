@@ -106,10 +106,10 @@ dl {
   dl {
     float: left;
     dt {
-      min-width: auto;
+      min-width: 0;
     }
     dd {
-      min-width: auto;
+      min-width: 0;
     }
   }
 }
@@ -126,7 +126,7 @@ dl.contact_data {
     padding-left: 1em;
   }
   dd.icon {
-    min-width: auto;
+    min-width: 0;
   }
   dd.p {
   }

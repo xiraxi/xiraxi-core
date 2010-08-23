@@ -71,6 +71,7 @@ div.report_spam {
 
 .pagination {
   margin-left: $box-margin;
+  overflow: auto;
 
   ul {
      display: inline-block;

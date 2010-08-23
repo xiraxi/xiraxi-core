@@ -130,11 +130,15 @@
       color: black;
     }
     a:hover {
-      color: $link-color;
+      color: $link-color; 
+      color: black;
+      text-decoration: none;
+      /* black y none puestos para salir del paso */
       background-image: url(../images/icons/f_submenu_li_a_hover.png);
     }
   }
-  li.active {
+  li.active, li:hover {
+    /* el hover puesto solo para salir del paso */
     a {
         background-color: $activemenu-color;
         font-weight: bold;
