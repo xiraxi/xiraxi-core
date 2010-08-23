@@ -1,0 +1,18 @@
+es:
+  status:
+    forbidden: "Lo sentimos, no puedes acceder a este objeto."
+    not_found: "Lo sentimos, el objeto solicitado no se ha encontrado."
+
+  buttons:
+    ok: Enviar
+    cancel: Cancelar
+
+  actions:
+    edit: Editar
+    delete: Borrar
+
+  confirm:
+    delete: "¿Estás seguro?"
+
+  tag_cloud:
+    title: Nube de tags
