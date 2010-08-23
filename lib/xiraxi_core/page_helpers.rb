@@ -34,8 +34,17 @@ module XiraxiCore::PageHelpers
   end
 
   def locales(&block)
+    # Some controllers (like StaticPages) can override #locales using locales_iterator to provide
+    # alternative localized pages
+    locales_iterator(&block)
+  end
+
+  def locales_iterator(&block)
     I18n.available_locales.each do |locale|
-      block.call locale, t("locale.label", :locale => locale), locale.to_s == I18n.locale.to_s
+      block.call(:locale => locale,
+                 :label => t("locale.label", :locale => locale),
+                 :active => locale.to_s == I18n.locale.to_s,
+                 :path_to_set => set_locale_path(locale))
     end
   end
 end
