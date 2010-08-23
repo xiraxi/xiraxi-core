@@ -32,6 +32,12 @@ module XiraxiCore::PageHelpers
     result << '</div></div>'
     return result.html_safe
   end
+
+  def locales(&block)
+    I18n.available_locales.each do |locale|
+      block.call locale, t("locale.label", :locale => locale), locale.to_s == I18n.locale.to_s
+    end
+  end
 end
 
 require 'action_view/base'
