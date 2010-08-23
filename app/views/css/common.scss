@@ -195,4 +195,9 @@ div.anonymous {
   @include links-box;
 }
 
-
+.flash-box {
+  border: 4px solid $boxborder-color;
+  font-weight: bold;
+  padding: 0.4em;
+  margin-left: $box-margin;
+}
