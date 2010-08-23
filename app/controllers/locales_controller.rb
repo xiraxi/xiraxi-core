@@ -6,7 +6,7 @@ class LocalesController < ApplicationController
       session[:current_locale] = locale
     end
 
-    redirect_to :back
+    redirect_to(params[:return] || :back)
   end
 
 end
