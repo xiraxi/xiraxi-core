@@ -1,0 +1,7 @@
+
+es:
+  forms:
+    errors:
+      header:
+        one: "Un error no permitió que se guardara el objeto"
+        other: "%{count} errores no permitieron que se guardara el objeto"
