@@ -1,18 +1,23 @@
-$text-light: white;
-$text-medium: #505152;
-$text-dark: #555557;
-$text-verydark: #333;
-$text-default: #000;
+$text-light: white !default;
+$text-medium: #505152 !default;
+$text-dark: #555557 !default;
+$text-verydark: #333 !default;
+$text-default: #000 !default;
 
-$link-color: #044C94;
+$link-color: #044C94 !default;
 
-$mainmenu-color: #B60000;
-$activemenu-color: #E68080;
-$accent-color: #FF2B33;
+$mainmenu-color: #B60000 !default;
+$activemenu-color: #E68080 !default;
+$accent-color: #FF2B33 !default;
 
-$boxbg-color: #EEEEEE;
-$boxborder-color: #D8D8D8;
+$boxfg-color: black !default;
+$boxbg-color: #EEEEEE !default;
 
-$avatar-margin: 7px;
-$box-margin: 9px;
+$boxfg-selected-color: #EEE !default;
+$boxbg-selected-color: #444 !default;
+
+$boxborder-color: #D8D8D8 !default;
+
+$avatar-margin: 7px !default;
+$box-margin: 9px !default;
 

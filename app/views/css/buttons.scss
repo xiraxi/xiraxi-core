@@ -2,9 +2,10 @@
 .buttons, .buttons_bar {
   clear: both;
   margin-top: 2em;
-  @include button;
 
   button {
+    @include button;
+
     a.button {
       margin: 0;
       padding: 0;
@@ -15,6 +16,8 @@
     cursor: pointer;
   }
   a.button {
+    @include button;
+
     text-decoration: none;
     margin-left: 1em;
   }
@@ -24,6 +27,18 @@
     margin: auto;
     width: 14em;
     border: 4px solid $accent-color;
+  }
+
+  .ok-button {
+    font-weight: bold;
+  }
+  a.cancel-button, a.cancel-button:hover {
+    border: none;
+    background: none;
+    color: $link-color;
+  }
+  a.cancel-button:hover {
+    text-decoration: underline;
   }
 }
 

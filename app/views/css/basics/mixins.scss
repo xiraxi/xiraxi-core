@@ -63,27 +63,23 @@
 }
 
 @mixin button {
-  button, a.button {
-    background: $boxbg-color;
-    border: 1px solid $boxborder-color;
-    color: black;
-    display: inline-block;
-    padding: 0.4em;
-    margin: 0.3em;
-  }
-  button:hover, a.button:hover {
+  background: $boxbg-color;
+  color: $boxfg-color;
+  border: 1px solid $boxborder-color;
+
+  display: inline-block;
+  padding: 0.4em;
+  margin: 0.3em;
+
+  cursor: pointer;
+
+  &:hover {
     border: 1px solid $text-dark;
   }
-  .ok-button {
-    font-weight: bold;
-  }
-  a.cancel-button, a.cancel-button:hover {
-    border: none;
-    background: none;
-    color: $link-color;
-  }
-  a.cancel-button:hover {
-    text-decoration: underline;
+
+  &.selected {
+    color: $boxfg-selected-color;
+    background: $boxbg-selected-color;
   }
 }
 
