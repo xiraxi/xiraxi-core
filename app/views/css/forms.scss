@@ -104,10 +104,18 @@ form {
     clear: left;
     margin-bottom: 0.3em;
   }
+  .error {
+    ul {
+      margin: 0 0 2em 2em;
+
+      li {
+        display: list-item;
+      }
+    }
+  }
   .field_with_errors {
-    float: left;
     color: $mainmenu-color;
-    width: 49%;
+    display: table-cell;
    
     label {
       width: 100%;
