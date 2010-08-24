@@ -164,6 +164,10 @@ div.anonymous {
     border: 1px solid $boxborder-color;
     border-top: none;
     overflow: auto;
+
+    p {
+      margin: $box-margin;
+    }
   }
 }
 
@@ -201,3 +205,27 @@ div.anonymous {
   padding: 0.4em;
   margin-left: $box-margin;
 }
+
+.statistics {
+  dl {
+    dt {
+      clear: none;
+    }
+    dd {
+      margin-right: 1em;
+
+      a {
+        text-decoration: none;
+
+        img {
+          border: 0px none;
+        }
+      }
+    }
+    dd:first-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
