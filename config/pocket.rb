@@ -26,6 +26,12 @@ end
 
 class ClousureCompressor
   def compress(content)
+
+    if ENV["JS_COMPRESS"] == "skip"
+      STDERR.puts "Skipping JavaScript compressor"
+      return content
+    end
+
     if `which java`.empty?
       STDERR.puts "*** Java was not found in your path."
       STDERR.puts "*** You can install it with openjdk-6-jre-headless"
