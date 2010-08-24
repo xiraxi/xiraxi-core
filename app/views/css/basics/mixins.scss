@@ -8,7 +8,7 @@
   a {
     text-decoration: underline; 
   }
-  .user-photo {
+  .user_photo {
     display: inline-block;
     border: 1px solid #66a3c2;
     float: left;
@@ -52,6 +52,18 @@
   }
   div.buttons {
     display: inline-block;
+  }
+  div.buttons, div.buttons_bar {
+    a {
+      @include button;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    form {
+      display: inline;
+    }
   }
 }
 

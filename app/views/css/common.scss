@@ -213,6 +213,9 @@ div.anonymous {
     dt {
       clear: none;
     }
+    dt:after {
+      content: ":";
+    }
     dd {
       margin-right: 1em;
 
@@ -256,31 +259,30 @@ div.anonymous {
   background: url(../images/tag_blue.png) no-repeat;
   padding-left: 20px;
 
-  ul {
-    margin: 0;
-    padding: 0;
+  dt:after {
+    content: ":";
+  }
+  dd {
+    display: inline;
+    margin-left: 0.4em;
 
-    li {
-      display: inline;
-
-      a {
-        text-decoration: none;
-        color: $text-dark;
-      }
-      a:after {
-        content: ",";
-      }
-      a:hover {
-        color: $link-color;
-        text-decoration: underline;
-      }
+    a {
+      text-decoration: none;
+      color: $link-color;
     }
-    li:last-child {
-      a:after {
-        content: none;
-      }
+    a:after {
+      content: ",";
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  dd:last-child {
+    a:after {
+      content: none;
     }
   }
 }
+
 
 
