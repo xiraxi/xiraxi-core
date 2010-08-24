@@ -225,7 +225,29 @@ div.anonymous {
     dd:first-child {
       margin-right: 0;
     }
+    dd.comments {
+      background: url(../images/icons/comments.png) top right no-repeat;
+      padding-right: 20px;
+    }
+    dd.votes {
+      background: url(../images/icons/accept.png) top right no-repeat;
+      padding-right: 20px;
+      margin-right: 0;
+    }
+    dd.voting {
+      margin-left: 0;
+
+      a.up {
+        background: url(../images/icons/thumb_up.png) top right no-repeat;
+        padding-right: 20px;
+      }
+      a.down {
+        background: url(../images/icons/thumb_down.png) top right no-repeat;
+        padding-right: 20px;
+      }
+    }
   }
 }
+
 
 
