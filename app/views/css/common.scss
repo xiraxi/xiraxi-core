@@ -207,6 +207,8 @@ div.anonymous {
 }
 
 .statistics {
+  margin: 0 0 0.5em;
+
   dl {
     dt {
       clear: none;
@@ -249,5 +251,36 @@ div.anonymous {
   }
 }
 
+.tags {
+  margin: 0 0 0.5em;
+  background: url(../images/tag_blue.png) no-repeat;
+  padding-left: 20px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        text-decoration: none;
+        color: $text-dark;
+      }
+      a:after {
+        content: ",";
+      }
+      a:hover {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+    li:last-child {
+      a:after {
+        content: none;
+      }
+    }
+  }
+}
 
 
