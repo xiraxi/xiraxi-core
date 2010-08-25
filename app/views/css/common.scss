@@ -322,6 +322,11 @@ div.anonymous {
         a.tag5 {
           font-size: 180%;
         }
+        a.selected {
+          color: $text-default;
+          background: $boxbg-color;
+          padding: 0 0.2em;
+        }
       }
     }
   }
