@@ -24,7 +24,7 @@ module XiraxiCore::PageHelpers
     @tag_selected ||= params[:tag]
     result = '<div class="tag-cloud" class="box">'
     result << "<h2>#{t("tag_cloud.title")}</h2>"
-    result << "<div class='content'><ul><p>Etiquetas:</p>"
+    result << "<div class='content'><p>#{t("tag_cloud.subtitle")}</p><ul>"
     tag_cloud(model.tag_counts_on(:tags), %w(tag1 tag2 tag3 tag4 tag5)) do |tag, css_class|
       result << '<li>' 
       selected = @tag_selected == tag.name
