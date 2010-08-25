@@ -15,6 +15,7 @@ module XiraxiCore::PageHelpers
   end
 
   def link_button_delete(url)
+    content_for :header, csrf_meta_tag
     link_to(t("actions.delete"), url, :class => "button", :method => :delete, :confirm => t("confirm.delete"))
   end
 
