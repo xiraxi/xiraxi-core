@@ -72,6 +72,20 @@ module XiraxiCore::PageHelpers
                  :path_to_set => set_locale_path(locale))
     end
   end
+
+  MenuChild = Struct.new :label, :url, :is_active, :generator
+  def menu_iterator(menu)
+    menu_item = MenuChild.new
+    menu.each_child do |item|
+      next unless item.visible?(controller)
+
+      menu_item.label = item.label
+      menu_item.url = item.path(controller)
+      menu_item.is_active = item.selected?(controller)
+      menu_item.generator = item
+      yield menu_item
+    end
+  end
 end
 
 require 'action_view/base'

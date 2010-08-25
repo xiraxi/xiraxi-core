@@ -1,9 +1,15 @@
-class XiraxiCore::MenuItem
+class XiraxiCore::Menu
 
-  attr_reader :parent, :children
+  attr_accessor :parent, :children
 
-  def initialize(parent)
-    @parent = parent
+  def initialize(&block)
+    if block
+      if block.arity == -1
+        instance_eval(&block)
+      else
+        block.call self
+      end
+    end
   end
 
   # Append a child to this item. @child can be a XiraxiCore::MenuItem subclass
@@ -12,7 +18,9 @@ class XiraxiCore::MenuItem
     @children ||= []
 
     if child.class == Class
-      @children << child.new(self)
+      child = child.new
+      child.parent = self
+      @children << child
     else
       @children << child
     end
@@ -22,7 +30,7 @@ class XiraxiCore::MenuItem
   # when any of its childs is selected
   def selected?(controller)
     if @children.blank?
-      path(controller) == controller.request.current_uri
+      path(controller) == controller.request.path
     else
       @children.any? {|c| c.selected?(controller) }
     end
@@ -47,6 +55,22 @@ class XiraxiCore::MenuItem
   # Iterates over all the inmediate children
   def each_child(&block)
     @children.each(&block) if @children
+  end
+
+  class SimpleLink < XiraxiCore::Menu
+    def initialize(label_key, route_name)
+      super()
+      @label_key = label_key
+      @route_name = route_name
+    end
+
+    def label
+      I18n.t @label_key
+    end
+
+    def path(controller)
+      controller.send "#{@route_name}_path"
+    end
   end
 
   private
