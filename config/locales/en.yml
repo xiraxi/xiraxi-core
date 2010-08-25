@@ -17,3 +17,7 @@ en:
   tag_cloud:
     title: Tag cloud
     subtitle: "Tags:"
+
+  paginate:
+    previous: "&#8592; Previous"
+    next: "Next &#8594;"
