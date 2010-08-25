@@ -40,6 +40,7 @@ module XiraxiCore::PageHelpers
   end
 
   def tag_list(object)
+    return "" if object.tags.empty?
     url_proc = params.kind_of?(Hash) ? (proc {|tag| tag ? params.merge(:tag => tag.name) : "#" }) : params
     @tag_selected ||= params[:tag]
     result = "<dl class='tags'><dt>#{ field_label object.class, :tags}</dt>"
