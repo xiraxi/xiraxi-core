@@ -1,4 +1,11 @@
 module XiraxiCore::PageHelpers
+ 
+  include WillPaginate::ViewHelpers::ActionView
+  def will_paginate_with_i18n(collection, options = {}) 
+    will_paginate_without_i18n(collection, options.merge(:previous_label => I18n.t("paginate.previous"), :next_label => I18n.t("paginate.next"))) 
+  end 
+  
+  alias_method_chain :will_paginate, :i18n 
 
   def flash_box(type, content = flash[type])
     if content

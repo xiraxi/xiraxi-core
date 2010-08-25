@@ -16,3 +16,7 @@ es:
 
   tag_cloud:
     title: Nube de tags
+
+  paginate:
+    previous: "&#8592; Anterior"
+    next: "Siguiente &#8594;"

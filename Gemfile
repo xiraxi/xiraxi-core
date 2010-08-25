@@ -7,6 +7,8 @@ gem 'rails', '3.0.0.rc'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
+
 gemspec
 
 # Use unicorn as the web server
