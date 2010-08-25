@@ -19,5 +19,5 @@ es:
     subtitle: "Etiquetas:"
 
   paginate:
-    previous: "&#8592; Anterior"
-    next: "Siguiente &#8594;"
+    previous: "Anterior"
+    next: "Siguiente"
