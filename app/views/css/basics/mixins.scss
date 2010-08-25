@@ -95,14 +95,18 @@
   }
 }
 
+@mixin hidden {
+  position: absolute;
+  left: -6000px;
+}
+
 @mixin fieldset-hidden {
   border: 0;
   margin: 0;
   padding: 0;
 
   legend {
-    position: absolute;
-    left: -6000px;
+    @include hidden; 
   }
 }
 

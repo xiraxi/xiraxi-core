@@ -285,4 +285,44 @@ div.anonymous {
 }
 
 
+.tag-cloud {
+  h2 {
+    margin-bottom: 0.2em;
+  }
+  .content {
+    p {
+      @include hidden;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
 
+      li {
+        display: inline-block;
+        padding: 0 0.5em;
+
+        a {
+          color: $text-dark;
+        }
+        a:hover {
+          color: $link-color;
+        }
+        a.tag1 {
+          font-size: 100%;
+        }
+        a.tag2 {
+          font-size: 120%;
+        }
+        a.tag3 {
+          font-size: 140%;
+        }
+        a.tag4 {
+          font-size: 160%;
+        }
+        a.tag5 {
+          font-size: 180%;
+        }
+      }
+    }
+  }
+}
