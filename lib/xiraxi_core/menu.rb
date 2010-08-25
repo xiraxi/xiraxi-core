@@ -30,7 +30,7 @@ class XiraxiCore::Menu
   # when any of its childs is selected
   def selected?(controller)
     if @children.blank?
-      path(controller) == controller.request.path
+      path(controller) == controller.request.fullpath
     else
       @children.any? {|c| c.selected?(controller) }
     end
