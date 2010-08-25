@@ -33,14 +33,28 @@ module XiraxiCore::PageHelpers
     result << "<h2>#{t("tag_cloud.title")}</h2>"
     result << "<div class='content'><p>#{t("tag_cloud.subtitle")}</p><ul>"
     tag_cloud(model.tag_counts_on(:tags), %w(tag1 tag2 tag3 tag4 tag5)) do |tag, css_class|
-      result << '<li>' 
-      selected = @tag_selected == tag.name
-      css_class = "#{css_class} selected" if selected
-      result << link_to(tag.name,url_proc.call(selected ? nil : tag), :class => css_class) 
-      result << '</li>' 
+      result << "<li>#{link_to_tag(tag, {:css_class => css_class, :url_proc => url_proc})}</li>"
     end
     result << '</ul></div></div>'
     return result.html_safe
+  end
+
+  def tag_list(object)
+    url_proc = params.kind_of?(Hash) ? (proc {|tag| tag ? params.merge(:tag => tag.name) : "#" }) : params
+    @tag_selected ||= params[:tag]
+    result = "<dl class='tags'><dt>#{ field_label object.class, :tags}</dt>"
+    object.tags.each do |tag|
+      result << "<dd>#{link_to_tag(tag, {:url_proc => url_proc})}</dd>"
+    end
+    result << "</dt></dl>"
+    return result.html_safe
+  end
+
+  def link_to_tag(tag, options = {})
+    url_proc = options[:url_proc] || (params.kind_of?(Hash) ? (proc {|tag| tag ? params.merge(:tag => tag.name) : "#" }) : params)
+    selected = @tag_selected == tag.name
+    css_class = "#{options[:css_class]} selected" if selected
+    link_to(tag.name,url_proc.call(selected ? nil : tag), :class => css_class) 
   end
 
   def locales(&block)
