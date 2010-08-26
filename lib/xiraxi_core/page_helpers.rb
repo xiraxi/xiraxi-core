@@ -55,7 +55,7 @@ module XiraxiCore::PageHelpers
     url_proc = options[:url_proc] || (params.kind_of?(Hash) ? (proc {|tag| tag ? params.merge(:tag => tag.name) : "#" }) : params)
     selected = @tag_selected == tag.name
     css_class = selected ? "#{options[:css_class]} selected" : options[:css_class]
-    link_to(tag.name,url_proc.call(selected ? nil : tag), :class => css_class) 
+    link_to(content_tag(:span, "tag:", :class => "hidden") + h(tag.name), url_proc.call(selected ? nil : tag), :class => css_class) 
   end
 
   def locales(&block)
