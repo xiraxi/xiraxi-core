@@ -279,7 +279,7 @@ div.anonymous {
   }
   dd:last-child {
     a:after {
-      content: none;
+      content: "";
     }
   }
 }
