@@ -47,7 +47,7 @@ module XiraxiCore::PageHelpers
     object.tags.each do |tag|
       result << "<dd>#{link_to_tag(tag, {:url_proc => url_proc})}</dd>"
     end
-    result << "</dt></dl>"
+    result << "</dl>"
     return result.html_safe
   end
 
