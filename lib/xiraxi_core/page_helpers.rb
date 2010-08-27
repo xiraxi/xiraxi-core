@@ -73,6 +73,12 @@ module XiraxiCore::PageHelpers
     end
   end
 
+  def locales_for_select
+    I18n.available_locales.map do |locale|
+      [ t("locale.label", :locale => locale), locale ]
+    end
+  end
+
   MenuChild = Struct.new :label, :url, :is_active, :generator
   def menu_iterator(menu)
     menu_item = MenuChild.new
