@@ -29,7 +29,7 @@ module XiraxiCore::PageHelpers
   def tag_cloud_generator(model)
     url_proc = params.kind_of?(Hash) ? (proc {|tag| tag ? params.merge(:tag => tag.name) : "#" }) : params
     @tag_selected ||= params[:tag]
-    result = '<div class="tag-cloud box">'
+    result = '<div class="tag-cloud">'
     result << "<h2>#{t("tag_cloud.title")}</h2>"
     result << "<div class='content'><p>#{t("tag_cloud.subtitle")}</p><ul>"
     tag_cloud(model.tag_counts_on(:tags), %w(tag1 tag2 tag3 tag4 tag5)) do |tag, css_class|
