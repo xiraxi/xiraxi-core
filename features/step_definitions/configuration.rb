@@ -12,3 +12,8 @@ Given /^"([^"]*)" configuration for "([^"]*)" is ([^"]*)$/ do |plugin, element, 
     Rails.application.config.send(plugin).send("[]=", element, value)
   end
 end
+
+Given /^locale is "([^"]*)"$/ do |locale|
+  Caulfield.session[:current_locale] = locale
+  Caulfield.session.should include(:current_locale => locale)
+end
