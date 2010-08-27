@@ -73,42 +73,21 @@ div.report_spam {
   margin-left: $box-margin;
   overflow: auto;
 
-  ul {
-     display: inline-block;
-     float: right;
-     margin: 0;
-     padding: 0;
-
-     li {
-       display: inline;
-
-       a {
-         display: inline-block;
-         border: 1px solid $boxbg-color;
-         min-width: 1.5em;
-         text-align: center;
-       }
-     }
+  a {
+    display: inline-block;
+    border: 1px solid $boxbg-color;
+    min-width: 1.5em;
+    text-align: center;
   }
-  .relative {
-     display: inline-block;
-
-     ul {
-       li {
-         a {
-           border: none;
-           background: url(../images/icons/page_next.png) no-repeat right;
-           padding-right: 20px;
-         }
-       }
-       li:first-child {
-         a {
-           background: url(../images/icons/page_previous.png) no-repeat left;
-           padding-left: 20px;
-           margin-right: 0.5em;
-         }
-       }
-     }
+  .previous_page {
+    background: url(../images/icons/page_previous.png) no-repeat left 0.4em;
+    padding-left: 20px;
+    margin-right: 0.5em;
+  }
+  .next_page {
+    border: none;
+    background: url(../images/icons/page_next.png) no-repeat right 0.4em;
+    padding-right: 20px;
   }
 }
 
