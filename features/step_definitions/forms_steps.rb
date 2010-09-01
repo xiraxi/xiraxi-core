@@ -1,7 +1,7 @@
 
 When /^I submit the form "([^"]+)"$/ do |selector|
   with_scope(selector) do
-    find(:xpath, "/*[@type=\"submit\"]").click
+    find(:xpath, "//*[@type=\"submit\"]").click
   end
 end
 

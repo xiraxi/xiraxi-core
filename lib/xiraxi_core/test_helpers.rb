@@ -3,7 +3,7 @@ module XiraxiCore::TestHelpers
   extend self
 
   def load_definitions
-    %w(support factories step_definitions).each do |base|
+    %w(factories support step_definitions).each do |base|
       (Rails.application.railties.engines + [Rails]).flatten.each do |engine|
         features_dir = engine.root.join("features")
         if features_dir.directory?

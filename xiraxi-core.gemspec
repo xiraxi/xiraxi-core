@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.files = %w(app config db lib public rails tasks test).map {|dir| Dir["#{dir}/*", "#{dir}/**/*" ] }.flatten
 
   s.add_dependency "asset-pocket"
-  s.add_dependency "friendly_id"
+  s.add_dependency "friendly_id", "= 3.1.3"
   s.add_dependency "acts-as-taggable-on"
   s.add_dependency "paperclip"
   s.add_dependency "http_accept_language"

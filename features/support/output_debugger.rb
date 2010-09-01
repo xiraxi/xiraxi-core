@@ -3,7 +3,9 @@
 # Possible values
 #   f    Save it on /tmp/cucumber_output.XXX.html
 #   s    Dump to stderr
-After do
+After do |scenario|
+  next unless scenario.failed?
+
   case ENV["XT"]
   when "s"
     STDERR.puts page.body
