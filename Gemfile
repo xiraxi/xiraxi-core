@@ -30,3 +30,5 @@ gemspec
 #group :development, :test do
 #  gem "rspec"
 #end
+
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
