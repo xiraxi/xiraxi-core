@@ -21,3 +21,5 @@ en:
   paginate:
     previous: "Previous"
     next: "Next"
+
+  new_window: "[Open in a new window]"
