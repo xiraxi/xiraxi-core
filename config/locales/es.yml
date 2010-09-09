@@ -21,5 +21,3 @@ es:
   paginate:
     previous: "Anterior"
     next: "Siguiente"
-
-  new_window: "[Abrir en nueva ventana]"
