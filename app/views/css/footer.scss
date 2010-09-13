@@ -25,6 +25,11 @@
           padding: 0 6px 0 2px;
           color: $mainmenu-color;
         }
+
+        &.active {
+          a { color: $text-default; }
+          background-color: $activemenu-color;
+        }
       }
       li:first-child {
         a {
