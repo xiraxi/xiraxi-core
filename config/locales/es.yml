@@ -21,14 +21,3 @@ es:
   paginate:
     previous: "Anterior"
     next: "Siguiente"
-
-  translations:
-    index:
-      title: Traducciones
-  
-  admin_index:
-    groups:
-      locales: Literales
-    items:
-      translations: Traducciones
-
