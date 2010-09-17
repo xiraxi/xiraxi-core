@@ -4,10 +4,10 @@ class XiraxiCore::Menu
 
   def initialize(&block)
     if block
-      if block.arity == -1
-        instance_eval(&block)
-      else
+      if block.arity == 1
         block.call self
+      else
+        instance_eval(&block)
       end
     end
   end

@@ -1,6 +1,5 @@
 
 require 'openssl'
-require 'md5'
 
 class XiraxiCore::Security
 
@@ -36,11 +35,13 @@ class XiraxiCore::Security
   end
 
   def random_keys!
+    require 'digest/md5'
+
     cipher = OpenSSL::Cipher::Cipher.new(CipherAlgo)
 
     @aes_key = cipher.random_key
     @aes_iv = cipher.random_iv
-    @hmac_key = MD5.new(File.read("/dev/urandom", 100)).hexdigest
+    @hmac_key = Digest::MD5.new(File.read("/dev/urandom", 100)).hexdigest
     self
   end
 

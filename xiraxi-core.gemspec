@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.add_dependency "http_accept_language"
   s.add_dependency "haml"
   s.add_dependency "asset-pocket"
-  s.add_dependency "migrext"
+  s.add_dependency "migrext", "= 0.2.1"
 
 end

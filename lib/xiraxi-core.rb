@@ -4,7 +4,7 @@ class XiraxiCore < Rails::Engine
   config.community.web_name = "Unnamed Xiraxi Instance"
   config.community.default_mail = "manager@xiraxi"
 
-  initializer :after, "xiraxi_core.external_migrations" do
+  initializer :after => "xiraxi_core.external_migrations" do
     Rails.application.railties.engines.each do |engine|
       migrations_dir = engine.root.join("db/migrate")
       if migrations_dir.directory?
