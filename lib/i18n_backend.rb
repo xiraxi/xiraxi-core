@@ -6,7 +6,7 @@ class XiraxiCore::I18nBackend < I18n::Backend::Simple
       key = [scope, key].join(".")
     end
 
-    result = Translation.get(key, locale) || super || super(I18n.default_locale, key, [], options)
+    result = Translation.get(key, locale) || super(locale, key, [], options)  || super(I18n.default_locale, key, [], options)
 
     if result.kind_of?(Hash)
       result.each_key do |result_key|
