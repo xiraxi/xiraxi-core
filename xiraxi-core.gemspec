@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.add_dependency "friendly_id", "= 3.1.3"
   s.add_dependency "acts-as-taggable-on"
   s.add_dependency "paperclip"
-  s.add_dependency "http_accept_language"
+  #s.add_dependency "http_accept_language"
   s.add_dependency "haml"
   s.add_dependency "asset-pocket"
   s.add_dependency "migrext", "= 0.2.1"
