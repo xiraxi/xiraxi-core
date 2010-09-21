@@ -22,6 +22,8 @@
 #main {
   display: table-cell;
   width: 541px;
+  overflow: auto;
+  max-width: 541px;
   padding: 9px;
   padding-bottom: 0;
 }
