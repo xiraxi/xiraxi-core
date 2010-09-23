@@ -14,7 +14,7 @@ module ActiveSupport::Dependencies
 
     if path_suffix = PathFoundForFiles.delete(file_name)
       path_suffix = path_suffix + '.rb' unless path_suffix.ends_with? '.rb'
-      autoload_paths.each do |root|
+      autoload_paths.reverse.each do |root|
         path = File.join(root, path_suffix)
         next if path == file_name
         require_or_load_without_dogmatix(path) if File.file?(path)
