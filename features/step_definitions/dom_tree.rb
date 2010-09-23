@@ -27,6 +27,12 @@ Then /^there is a "([^"]*)" box within the "([^"]*)" box$/ do |locator, scope|
   end
 end
 
+Then /^there is not a "([^"]*)" box within the "([^"]*)" box$/ do |locator, scope|
+  with_scope(scope) do
+    proc { find_by_query(locator) }.should raise_error(Capybara::ElementNotFound)
+  end
+end
+
 Then /^the "([^"]*)" box does not contain "([^"]*)"$/ do |locator, content|
   find_by_query(locator).text.should_not include(content)
 end
