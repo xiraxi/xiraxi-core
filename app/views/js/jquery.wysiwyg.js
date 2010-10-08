@@ -274,18 +274,19 @@
                 visible : true,
                 exec    : function()
                 {
-                    if ( $.browser.msie )
-                    {
-                        this.focus();
-                        this.editorDoc.execCommand('insertImage', true, null);
-                    }
-                    else
-                    {
+//                    if ( $.browser.msie )
+//                    {
+//                        this.focus();
+//                        this.editorDoc.execCommand('insertImage', true, null);
+//                    }
+//                    else
+//                    {
                         var szURL = prompt('URL', 'http://');
 
                         if ( szURL && szURL.length > 0 )
+                            this.focus();
                             this.editorDoc.execCommand('insertImage', false, szURL);
-                    }
+//                    }
                 },
 
                 tags : ['img'],
