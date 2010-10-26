@@ -41,7 +41,10 @@ class XiraxiCore::Security
 
     @aes_key = cipher.random_key
     @aes_iv = cipher.random_iv
-    @hmac_key = Digest::MD5.new(File.read("/dev/urandom", 100)).hexdigest
+
+    random_data = Digest::MD5.new
+    random_data << File.read("/dev/urandom", 100)
+    @hmac_key = random_data.hexdigest
     self
   end
 
