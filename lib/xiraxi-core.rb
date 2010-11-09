@@ -1,3 +1,4 @@
+require 'migrext'
 
 class XiraxiCore < Rails::Engine
   config.community = ActiveSupport::OrderedOptions.new
